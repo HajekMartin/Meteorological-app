@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "64aa9591-06ae-4193-85a0-98263ecfc0b6",
+		"name": "Measurement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18591168"
+	},
+	"item": [
+		{
+			"name": "/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cityId\": 6722511,\r\n    \"date\": 1684352633,\r\n    \"temperature\": 99,\r\n    \"windSpeed\": 33,\r\n    \"rain\": 11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/measurement/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"measurement",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/measurement/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"measurement",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/find",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/measurement/find?id=555",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"measurement",
+						"find"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "555"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/measurement/delete?id=555",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"measurement",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "555"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 205,\r\n    \"cityId\": 3063853, // Turnov\r\n    \"date\": 1684352633,\r\n    \"temperature\": 50,\r\n    \"rain\": 50,\r\n    \"windSpeed\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/measurement/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"measurement",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/actual",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4654,\r\n    \"cityId\": 6722153,\r\n    \"date\": 1684249871,\r\n    \"temperature\": 38\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/measurement/actual?cityId=3063853",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"measurement",
+						"actual"
+					],
+					"query": [
+						{
+							"key": "cityId",
+							"value": "3063853",
+							"description": "Turnov"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/average",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4654,\r\n    \"cityId\": 6722153,\r\n    \"date\": 1684249871,\r\n    \"temperature\": 38\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/measurement/average?cityId=3063853&duration=3600",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"measurement",
+						"average"
+					],
+					"query": [
+						{
+							"key": "cityId",
+							"value": "3063853",
+							"description": "Turnov"
+						},
+						{
+							"key": "duration",
+							"value": "3600",
+							"description": "Hodina"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

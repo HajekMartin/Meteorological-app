@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "e38ddb1c-7add-4f0f-8f5d-29e78a5fd2f1",
+		"name": "State",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18591168"
+	},
+	"item": [
+		{
+			"name": "/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"UA\",\r\n    \"name\": \"Ukraine\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/state/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"state",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/find",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/state/find?id=UA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"state",
+						"find"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "UA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/state/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"state",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/state/delete?id=UA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"state",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "UA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"UA\",\r\n    \"name\": \"Ukra 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/state/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"state",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

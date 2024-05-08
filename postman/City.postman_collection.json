@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "0c62e9b3-deae-4114-90a6-f6afa8f68a43",
+		"name": "City",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18591168"
+	},
+	"item": [
+		{
+			"name": "/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6722511, //Ivanivka\r\n    \"name\": \"Ivanivka\",\r\n    \"stateId\": \"UA\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/city/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"city",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/city/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"city",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/find",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/city/find?id=6722153",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"city",
+						"find"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6722153",
+							"description": "Ivanivka"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/city/delete?id=6722153",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"city",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6722153",
+							"description": "Veselevo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6722511, //Veselevo\r\n    \"name\": \"Veselevo\",\r\n    \"stateId\": \"UA\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/city/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"city",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <title>Státy</title>
+    </head>
+
+    <body>
+        <div th:insert="~{shared/navbar}"/>
+
+        <main class="m-2">
+            <button type="button" class="btn btn-primary" th:onclick="|window.location.href='/state/add'|">Přidat stát</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Jméno</th>
+                        <th scope="col">Upravit</th>
+                        <th scope="col">Smazat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <th:block th:each="state : ${states}">
+                        <tr>
+                            <td th:text="${state.getId()}"></td>
+                            <td th:text="${state.getName()}"></td>
+                            <td>
+                                <!-- Nějaká magie ze stack overflow abych ho přinutil dát tam string jako queryparam -->
+                                <button type="submit" class="btn btn-primary" th:onclick="|window.location.href='@{/state/edit(id=${state.getId()})}'|">Upravit</button>
+                            </td>
+                            <td>
+                                <button type="submit" class="btn btn-primary" th:onclick="|window.location.href='@{/state/delete(id=${state.getId()})}'|">Smazat</button>
+                            </td>
+                        </tr>
+                    </th:block>
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>
